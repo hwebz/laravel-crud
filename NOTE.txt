@@ -1,0 +1,7 @@
+php composer.phar create-project laravel/laravel laravel-crud
+php -S localhost:8888 -t laravel-crud/public
+// change DB configuration in .env
+php artisan make:model Supplier
+php artisan make:controller SupplierController --resource
+php artisan make:migration create_supplier_table
+php artisan migrate
